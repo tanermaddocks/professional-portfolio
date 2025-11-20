@@ -14,8 +14,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(0.1864 0.051 39.75);
+    --muted-background: oklch(0.2227 0.0804 15.74);
+    --foreground: oklch(0.4943 0.1687 22.7);
+    --primary: white;
+    --secondary: black;
+    --emphasis: oklch(0.1997 0.1181 266.55);
   }
 }
 
