@@ -9,26 +9,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function GallerySection() {
-
-  const stockImages = [{id: 1, src: "/image", alt: "An image"}, {id: 2, src: "/image", alt: "Also an image"} ]
-  
+  const stockImages = [
+    { id: 1, src: "/image_2.jpg", alt: "An image" },
+    { id: 2, src: "/image.png", alt: "Also an image" },
+  ];
 
   return (
-    <Carousel className="relative w-full p-8">
-      <CarouselContent>
-        {stockImages.map((image) => 
-                <CarouselItem key={image.id}>
-          <div className="p-1">
-            <Card>
-              <CardContent className="flex aspect-square items-center justify-center p-6">
-                <Image src={image.src} alt={image.alt} width={300} height={300}/>
-              </CardContent>
-            </Card>
-          </div>
-        </CarouselItem>)}
-      </CarouselContent>
-      <CarouselPrevious className="scale-200" />
-      <CarouselNext className="scale-200" />
-    </Carousel>
+    <section>
+      <Carousel>
+        <CarouselContent>
+          {stockImages.map((image) => (
+            <CarouselItem key={image.id} className="min-h-full flex items-center justify-center">
+              <div className="border rounded-lg m-6 p-2">
+                <img src={image.src} alt={image.alt} className="border rounded-lg overflow-hidden"/>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </section>
   );
 }
