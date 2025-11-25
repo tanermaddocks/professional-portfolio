@@ -26,11 +26,11 @@ export default function GallerySection() {
               key={image.id}
               className="min-h-full flex items-center justify-center"
             >
-              <div className="border rounded-lg m-6 p-2">
+              <div className="m-6 p-2">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="border rounded-lg overflow-hidden"
+                  className="border-4 rounded-lg overflow-hidden"
                 />
               </div>
             </CarouselItem>
