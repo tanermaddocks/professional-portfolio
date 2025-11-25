@@ -32,7 +32,9 @@ export default function ContactForm() {
       <form>
         <DialogTrigger asChild>
           <Button variant="ghost" className="!p-0 h-auto">
-            <div className="fixed bottom-8 right-8 z-10 scale-250"><ContactButton/></div>
+            <div className="fixed bottom-8 right-8 z-10 scale-250">
+              <ContactButton />
+            </div>
           </Button>
         </DialogTrigger>
         <DialogContent>
@@ -49,7 +51,7 @@ export default function ContactForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Name</FormLabel>
-                  <FormControl>
+                  <FormControl className="bg-muted">
                     <Input minLength={1} maxLength={50} {...field} />
                   </FormControl>
                 </FormItem>
@@ -61,7 +63,7 @@ export default function ContactForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Email</FormLabel>
-                  <FormControl>
+                  <FormControl className="bg-muted">
                     <Input
                       minLength={1}
                       maxLength={50}
@@ -79,7 +81,7 @@ export default function ContactForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
-                  <FormControl>
+                  <FormControl className="bg-muted">
                     <Textarea
                       minLength={1}
                       maxLength={300}
