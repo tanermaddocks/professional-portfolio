@@ -2,7 +2,6 @@
 
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -41,7 +40,7 @@ export default function ContactForm() {
           <DialogHeader>
             <DialogTitle>Contact me</DialogTitle>
             <DialogDescription>
-              Use this form to contact me and I'll respond shortly!
+              {"Use this form to contact me and I'll respond shortly!"}
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>

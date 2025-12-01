@@ -13,7 +13,7 @@ export default function ContactButton(props: React.SVGProps<SVGSVGElement>) {
         cx="25"
         cy="25"
         r="24"
-        fill= "var(--color-accent)"
+        fill= {props.fill || "var(--color-accent)"}
         stroke="black"
         strokeWidth="2"
       />

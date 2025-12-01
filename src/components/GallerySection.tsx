@@ -7,9 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+
+import Image from "next/image";
 
 export default function GallerySection() {
   const stockImages = [
@@ -19,18 +19,22 @@ export default function GallerySection() {
 
   return (
     <section>
-      <Carousel plugins={[Autoplay({ delay: 5000 })]}>
-        <CarouselContent> {/** TODO: stop autoplay on interaction */}
+      <Carousel plugins={[Autoplay({ delay: 50000 })]}>
+        <CarouselContent>
+          {" "}
+          {/** TODO: stop autoplay on interaction */}
           {stockImages.map((image) => (
             <CarouselItem
               key={image.id}
               className="min-h-full flex items-center justify-center"
             >
               <div className="m-6 p-2">
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="border-4 rounded-lg overflow-hidden"
+                  className="border-4 rounded-lg overflow-hidden object-contain"
+                  height={400}
+                  width={400}
                 />
               </div>
             </CarouselItem>

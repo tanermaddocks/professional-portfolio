@@ -11,7 +11,7 @@ export default function ContentSection() {
   return (
     <section className="flex flex-col items-center p-4 gap-4">
       <h1 className="text-4xl italic font-bold">{title}</h1>
-      <p className="text-lg text-center">{body}</p>
+      <p className="text-lg text-center max-w-180">{body}</p>
     </section>
   );
 }
